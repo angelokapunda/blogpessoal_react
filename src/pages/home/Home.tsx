@@ -2,28 +2,53 @@
 function Home () {
     
     return (
-        <div style = {{
-            display: "flex",
-            justifyContent: "center",
-            width: "100vw"
-        }}>
-            <div>
-                <div style = {{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    width: "80vw"
-                }}>
-                    <h2>Seja Bem Vindo!</h2>
-                    <p>Expresse aqui seus pensamentos e opiniões</p>
+        <div className="
+            flex 
+            justify-center
+            bg-indigo-900
+        ">
+            <div className="
+                container
+                grid 
+                grid-cols-2
+                text-white
+            ">
+                <div className="
+                    flex
+                    flex-col
+                    justify-center
+                    items-center
+                    gap-4
+                    py-4
+                ">
+                    <h2 className="
+                    text-5xl 
+                    font-bold
+                    "> Seja Bem Vindo!</h2>
+                    <p className="text-xl
+                    ">Expresse aqui seus pensamentos e opiniões</p>
+
+                    <div className="
+                        flex
+                        justify-around
+                        gap-4
+                    ">
+                        <div className="
+                            rounded
+                            border-white
+                            border-solid
+                            border-2
+                            py-2 px-4
+                        ">
+                            Nova Postagem
+                        </div>
+                    </div>
                 </div>
-                <div style = {{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    width: "80vw"}}>
-                    <img src="https://i.imgur.com/VpwApCU.png" alt="Imágem da página Home"
-                    width="400px" />
+                <div className="
+                    flex
+                    justify-center
+                ">
+                    <img src="https://i.imgur.com/VpwApCU.png" alt="Imágem da página Home" className="w2/3"/>
                 </div>
             </div>
         </div>
