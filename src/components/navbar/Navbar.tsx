@@ -1,8 +1,20 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { AuthContext } from "../../contexts/AuthContext"
+import { useContext } from "react"
 
 function Navbar() {
+
+    const navigate = useNavigate()
+
+    const { handleLogout } = useContext(AuthContext)
+
+    function logout(){
+        handleLogout()
+        alert("O usuário foi desconectado com sucesso!")
+        navigate("/")
+    }
+    
     return (
-        <>
             <div className='w-full flex justify-center py-4
             			   bg-indigo-900 text-white'>
             
@@ -10,14 +22,13 @@ function Navbar() {
                     
                     <div className='flex gap-4'>
                         Postagens
-                        Temas
-                        Cadastrar tema
+                        <Link to='/temas' className='hover:underline'>Temas</Link>
+                        <Link to='/cadastrartema' className='hover:underline'>Cadastrar tema</Link>
                         Perfil
                         Sair
                     </div>
                 </div>
             </div>
-        </>
     )
 }
 
