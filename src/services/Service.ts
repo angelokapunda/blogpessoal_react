@@ -4,7 +4,10 @@ const api = axios.create({
     baseURL: "http://localhost:8080" ,
 })
 
-/*"https://blogpessoal-fwiy.onrender.com"*/
+/*
+ Estamos usando a o endereco local pq o deploy parou de funcionar // Sera reparado em breve OBS : só para não esquecer 
+"https://blogpessoal-fwiy.onrender.com"
+*/
 
 export const cadastrarUsuario = async (url: string, dados: object, setDados: Function) => {
     const resposta = await api.post(url, dados)
